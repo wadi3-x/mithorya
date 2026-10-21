@@ -6,8 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
+     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <style>
+        /* * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -18,8 +19,8 @@
             font-family: "Inter", sans-serif;
             background: #080611;
             color: white;
-            background-image: url("img/Duel mystique entre lumière et ombre.png");
-        }
+            /* background-image: url("img/Duel mystique entre lumière et ombre.png"); */
+        /* }
 
         .header {
             display: flex;
@@ -31,7 +32,7 @@
 
 
         }
-
+        
 
         .logo {
             display: flex;
@@ -42,7 +43,7 @@
             font-weight: 400;
             color: #fff;
             text-decoration: none;
-
+            list-style: linear-gradient(rgb(black))
 
         }
 
@@ -85,6 +86,8 @@
             display: flex;
             align-items: center;
             padding: 50px 40px;
+            list-style: linear-gradient(rgb(black))
+            
         }
 
 
@@ -141,13 +144,15 @@
 
         .nari h2 {
             font-size: 100px;
-            font-family: "Bebas Neue", sans-serif;
+            /* font-family: "Bebas Neue", sans-serif; */
             font-weight: 100px;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #080611;
+            text-transform: uppercase;
+            text-shadow: 0px 2px 5px #FFC247;
 
 
 
@@ -200,127 +205,156 @@
             /* background-color: #ffbf3f; */
             max-width: 1400px;
             /* max-height: 2000px; */
-         margin-bottom: 30px;
-         gap: 20px;
-         /* margin-top: 40px; */ 
+            margin-bottom: 50px;
+            gap: 20px;
+            margin: auto;
+            height: 400px;
+            width: 2000px;
+            /* margin-top: 40px; */
 
-      
+
 
         }
 
         .sukuna {
-           
-            
-            border-width: 30px;
-            height: 300px;
-            background-color: #080611;
-             border-radius: 20px;
 
+
+            /* border-width: 70px; */
+
+            /* background-color: #080611; */
+            border-radius: 20px;
+            border: 5px solid #000000;
+            background-image: url(img/f70e5d1f4444933a272ce502ab93703e.jpg);
+
+        }
+
+        .sukuna h2 {
+            width: 300px;
+            text-transform: uppercase;
         }
 
         .bleach {
-            border: 1px solid#080611;
-             border-radius: 20px;
-           
+            border: 5px solid#080611;
+            border-radius: 20px;
+            
+
         }
 
         .assta {
-            border: 1px solid#080611;
-             border-radius: 20px;
-             
+            border: 5px solid#080611;
+            border-radius: 20px;
+            
+
         }
 
         .wizzard {
-            border: 1px solid#080611;
-             border-radius: 20px;
+            border: 5px solid#080611;
+            border-radius: 20px;
+            background-image: url(img/3db6235562fdd799cf60708d5189035f.jpg);
         }
 
         .me {
-            border: 1px solid#080611;
+            border: 5px solid#080611;
             border-radius: 20px;
+            background-image: url(img/d19d4b262057de5aa536a964a559d137.jpg);
         }
-    </style>
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        main{
+             background-image: url("img/Duel mystique entre lumière et ombre.png");
+        } */
+    </style> */ -->
 
 </head>
 
-<body>
-    <main img src="img/Duel mystique entre lumière et ombre.png">
+<body class="font-['Inter',sans-serif] bg-[#080611] text-white">
+    <main class="bg-[url('img/Duel%20mystique%20entre%20lumière%20et%20ombre.png')]">
 
-        <header class="header">
+        <header class="flex items-center justify-between px-[50px] py-[15px] bg-black/50">
 
-            <a href="" class="logo-icon"><img src="img/Emblème Yu-Gi-Oh! aux énergies mystiques.png" alt=""></a>
-            <ul class="header-nav-links">
-                <li><a href="acceuil.html"> Home</a></li>
-                <li><a href="shop.html">Boutique</a></li>
-                <li><a href="Chamber.html"> boosters</a></li>
-                <li><a href="Grimoire.html">Ma collection</a></li>
-                <li><a href="Deck .html">Deck</a></li>
+            <a href="" class="grid place-items-center w-[10px] h-[38px] rounded-lg text-[#111] font-black"><img    class="w-[50px] h-full object-cover rounded-[15px]"      src="img/Emblème Yu-Gi-Oh! aux énergies mystiques.png" alt=""></a>
+            <ul class="flex items-center gap-12 list-none font-['Inter',sans-serif]">
+                <li><a href="acceuil.html" class="text-[#FFC247]"> Home </a></li>
+                <li><a href="shop.html"  class="hover:text-[#FFC247]">Boutique</a></li>
+                <li><a href="Chamber.html"  class="hover:text-[#FFC247]"> boosters</a></li>
+                <li><a href="Grimoire.html"  class="hover:text-[#FFC247]">Ma collection</a></li>
+                <li><a href="Deck .html"  class="hover:text-[#FFC247]">Deck</a></li>
             </ul>
-    
-    </header>
+              <a href="shop.html" aria-label="Voir mon panier" class="relative rounded-lg border border-purple-500 bg-[#291252] px-3 py-2 hover:border-[#FFC247]">
+          Panier</a>
 
-    <section class="hero">
+        </header>
 
-        <div class="hero-content">
-            <h1>CONSTRUIS TON DECK.<br>
-                GAGNE TON DUEL.</h1>
+        <section class="min-h-[700px] flex items-center px-10 py-[50px]">
 
-            <p>
-                achète des cartes, ouvre des boosters,
-                range ta collection et prépare ton deck
-                au même endroit.
-            </p>
+            <div class="max-w-[650px]">
+                <h1 class="text-[100px] leading-[1.05] mb-[30px] text-black/50 [text-shadow:0_2px_5px_#FFC247]">CONSTRUIS TON DECK.<br>
+                    GAGNE TON DUEL.</h1>
 
-            <div class="hero-buttons">
-                <a href="shop.html" class="naruto">
-                    Voir la boutique
-                </a>
+                <p  class="text-[20px] leading-[1.8] mb-[35px] text-white">
+                    achète des cartes, ouvre des boosters,
+                    range ta collection et prépare ton deck
+                    au même endroit.
+                </p>
 
-                <a href="Chamber.html" class="sasuki">
-                    Ouvrir un booster
-                </a>
+                <div class="flex gap-[18px]">
+                    <a href="shop.html"  class="px-[30px] py-5 rounded-xl no-underline font-bold bg-[#ffbf3f] text-[#111]">
+                        Voir la boutique
+                    </a>
+
+                    <a href="Chamber.html" class="px-[30px] py-5 rounded-xl no-underline font-bold border border-[purple] text-white bg-[#291252]">
+                        Ouvrir un booster
+                    </a>
+                </div>
             </div>
-        </div>
-        </div>
-    </section>
-    <section>
-        <div class="nari">
-            <h2>this is your carte</h2>
-            <p>so take it your time in comlete your carte, Best cartes </p>
-        </div>
-        <div class="abid">
-            <img src="img/0895829790cde0ffb0f0503b7a1b8e7c.jpg" alt="">
-            <img src="img/4430e6ef7e0e0302aaed620a016f120f.jpg" alt="">
-            <img src="img/7549a66533fe326ef4f20beaee5b9b14.jpg" alt="">
-            <img src="img/491a715469ad388a945a4fc3fc6c3268.jpg" alt="">
-        </div>
-    </section>
-    <section class="boutique">
-        <div class="sukuna">
-            <h1>get ready for your cartes</h1>
-            <p>spin here if you want packhets</p>
-            <button>buy now</button>
-        </div>
-        <div class="bleach">
-            <h1>get ready for your cartes</h1>
-            <p>spin here if you want packhets</p>
-            <button>buy now</button>
-        </div>
-        <div class="assta">
-            <h1>spin here if you want packhets</h1>
-            <p>spin here if you want packhets</p>
-            <button>buy now</button>
-        </div>
-        <div class="wizzard">
-            <h1>get ready for your cartes</h1>
-            <p>spin here if you want packhets</p>
-            <button>buy now</button>
-        </div>
-        <div class="me">
-            <h1>get ready for your cartes</h1>
-            <p>spin here if you want packhets</p>
-            <button>buy now</button>
-        </div>
+            </div>
+        </section>
+    </main>
+        <section>
+            <div class="px-10 py-[50px] mt-[100px]">
+                <h2 class="text-[100px] mb-5 flex items-center justify-center text-[#080611] uppercase [text-shadow:0_2px_5px_#FFC247]">this is your carte</h2>
+                <p class="text-[20px] leading-[1.8] m-auto flex items-center justify-center text-white"></p>so take it your time in comlete your carte, Best cartes </p>
+            </div>
+            <div  class="flex justify-between max-w-[100px] gap-5 ml-[3%] mb-[5%]">
+                <img  class="w-[320px] h-full object-cover rounded-[20px] mr-[20%]" src="img/0895829790cde0ffb0f0503b7a1b8e7c.jpg" alt="">
+                <img class="w-[320px] h-full object-cover rounded-[20px] mr-[20%]" src="img/4430e6ef7e0e0302aaed620a016f120f.jpg" alt="">
+                <img class="w-[320px] h-full object-cover rounded-[20px] mr-[20%]" src="img/7549a66533fe326ef4f20beaee5b9b14.jpg" alt="">
+                <img class="w-[320px] h-full object-cover rounded-[20px] mr-[20%]" src="img/491a715469ad388a945a4fc3fc6c3268.jpg" alt="">
+            </div>
+        </section>
+        <section class="flex justify-between gap-5 max-w-[1400px] m-auto h-[400px] w-[2000px]">
+            <div class="rounded-[20px] border-[5px] border-black bg-[url('img/f70e5d1f4444933a272ce502ab93703e.jpg')]" >
+                <h2 class="text-2xl w-[300px] uppercase">get ready for your cartes</h2>
+                <p>spin here if you want packhets</p>
+                <button>buy now</button>
+            </div>
+            <div class="border-[5px] border-[#080611] rounded-[20px]" >
+                <img class="w-full h-full object-cover rounded-[15px]" src="img/05354efabaa4baf246e944c629afa695.jpg" alt="">
+                <h2 class="text-2xl"></h2>>get ready for your cartes</h2>
+                <p>spin here if you want packhets</p>
+                <button>buy now</button>
+            </div>
+            <div class="border-[5px] border-[#080611] rounded-[20px] bg-[url('img/3db6235562fdd799cf60708d5189035f.jpg')]">
+                <h2 class="text-2xl">spin here if you want packhets</h2>
+                <p>spin here if you want packhets</p>
+                <button>buy now</button>
+            </div>
+            <div  class="border-[5px] border-[#080611] rounded-[20px] bg-[url('img/3db6235562fdd799cf60708d5189035f.jpg')]">
+                <h2 class="text-2xl">get ready for your cartes</h2>
+                <p>spin here if you want packhets</p>
+                <button>buy now</button>
+            </div>
+            <div class="border-[5px] border-[#080611] rounded-[20px] bg-[url('img/d19d4b262057de5aa536a964a559d137.jpg')]">
+
+                <h2 class="text-2xl">get ready for your cartes</h2>
+                <p>spin here if you want packhets</p>
+                <button>buy now</button>
+            </div>
 
 
 
@@ -333,22 +367,7 @@
 
 
 
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </section>
 
 
 
@@ -368,5 +387,21 @@
 
 
 
-</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
 </html>
