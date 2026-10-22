@@ -74,52 +74,15 @@
 
 // let total = 0;
 
-// function ajouterProduit(titre, prix) {
-//     const li = document.createElement('li');
-//     li.textContent = `${titre} _ ${prix} DH `;
-//     li.dataset.prix = prix; 
-
-//     const btn = document.createElement('button');
-//     btn.textContent = 'supprimer';
-//     btn.className = 'supprimer';
-
-//     li.appendChild(btn);
-//     panier.appendChild(li);
-
-//     total += prix;
-//     totalSpan.textContent = total;
-// }
-
-// catalogue.addEventListener('click', (e) => {
-//     if (!e.target.classList.contains('ajouter')) return;
-
-//     const produit = e.target.closest('.produit');
-//     const titre = produit.querySelector('.titre').textContent;
-//     const prixTexte = produit.querySelector('.prix').textContent.split('_')[1].replace('DH', '');
-//     const prix = parseInt(prixTexte, 10);
-
-//     ajouterProduit(titre, prix);
-// });
-
-// panier.addEventListener('click', (e) => {
-//     if (!e.target.classList.contains('supprimer')) return;
-
-//     const li = e.target.closest('li');
-//     total -= Number(li.dataset.prix);
-//     totalSpan.textContent = total;
-//     li.remove();
-// });
-/* ================= CARTES (flip au clic) ================= */
-/* Si l'élément n'existe pas dans la page, on l'ignore (pas d'erreur) */
 
 
 // paniee
-const catalogue  = document.querySelector('#catalogue');
-const panier     = document.querySelector('#panier');        
-const totalSpan  = document.querySelector('#total');
+const catalogue = document.querySelector('#catalogue');
+const panier = document.querySelector('#panier');
+const totalSpan = document.querySelector('#total');
 const nombreSpan = document.querySelector('#nombreArticles');
 const panierVide = document.querySelector('#panierVide');
-const btnVider   = document.querySelector('#viderPanier');
+const btnVider = document.querySelector('#viderPanier');
 
 let total = 0;
 let nombre = 0;
@@ -128,13 +91,9 @@ function majAffichage() {
     totalSpan.textContent = total;
     nombreSpan.textContent = nombre;
     panierVide.classList.toggle('hidden', nombre > 0);
+    document.querySelector('#badgePanier').textContent = nombre;
 }
-function majAffichage() {
-    totalSpan.textContent = total;
-    nombreSpan.textContent = nombre;
-    panierVide.classList.toggle('hidden', nombre > 0);
-    document.querySelector('#badgePanier').textContent = nombre;   
-}
+
 
 
 function ajouterProduit(titre, prix) {
@@ -164,7 +123,7 @@ catalogue.addEventListener('click', (e) => {
 
     const produit = e.target.closest('.produit');
     const titre = produit.querySelector('.titre').textContent.trim();
-    // "20dh", "40 dh", "100dh" -> on garde seulement les chiffres
+
     const prix = parseInt(produit.querySelector('.prix').textContent.replace(/\D/g, ''), 10);
 
     ajouterProduit(titre, prix);
