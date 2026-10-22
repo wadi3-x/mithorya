@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link rel="stylesheet" href="file:///c%3A/Users/ycode/Desktop/breif%203/acceuil.html"> -->
+
 </head>
 
 <body class="bg-[#080611] text-white">
@@ -19,13 +19,16 @@
         <ul class="flex items-center gap-12 list-none font-['Inter',sans-serif]">
             <li><a href="acceuil.html" class="text-[#FFC247]"> Home </a></li>
             <li><a href="boutique.html" class="hover:text-[#FFC247]">Boutique</a></li>
-            <li><a href="Chamber.html" class="hover:text-[#FFC247]"> boosters</a></li>
+            <li><a href="shop.html" class="hover:text-[#FFC247]"> boosters</a></li>
             <li><a href="Grimoire.html" class="hover:text-[#FFC247]">Ma collection</a></li>
             <li><a href="Deck .html" class="hover:text-[#FFC247]">Deck</a></li>
         </ul>
-        <a href="shop.html" aria-label="Voir mon panier"
+        <a href="#sectionPanier" aria-label="Voir mon panier"
             class="relative rounded-lg border border-purple-500 bg-[#291252] px-3 py-2 hover:border-[#FFC247]">
-            Panier</a>
+            Panier
+            <span id="badgePanier"
+                class="absolute -right-2 -top-2 grid h-5 w-5 place-items-center rounded-full bg-[#FFC247] text-xs font-bold text-black">0</span>
+        </a>
 
     </header>
 
@@ -56,6 +59,7 @@
             <div class="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-7">
 
 
+
                 <article class="produit rounded-2xl
                                 border border-purple-900 bg-[#130D23]
                                 transition duration-300
@@ -66,7 +70,7 @@
 
                     <div class="p-4">
 
-                        <h3 class="title mb-2 font-bold">
+                        <h3 class="titre mb-2 font-bold">
                             lucymon
                         </h3>
 
@@ -75,19 +79,16 @@
                         </p>
 
                         <span class="prix text-purple-400">20dh</span>
-                        </p>
 
-                        <button href="shop.html" class="ajouter block rounded-lg bg-[#FFC247]
+                        <button class="ajouter block rounded-lg bg-[#FFC247]
                                   py-2 text-center font-bold text-black
-                                  hover:bg-white">
+                                  hover:bg-white w-full">
                             buy
                         </button>
 
                     </div>
 
                 </article>
-
-
 
                 <article class="produit rounded-2xl
                                 border border-purple-900 bg-[#130D23]
@@ -99,7 +100,7 @@
 
                     <div class="p-4">
 
-                        <h3 class="title mb-2 font-bold">
+                        <h3 class="titre mb-2 font-bold">
                             Polyor
                         </h3>
 
@@ -107,11 +108,12 @@
                             carte disponible : 10
                         </p>
                         <span class="prix text-purple-400">40 dh</span>
-                        <button  class="ajouter block rounded-lg bg-[#FFC247]
+                        <button class="ajouter block rounded-lg bg-[#FFC247]
                                   py-2 text-center font-bold text-black
-                                  hover:bg-white">
+                                  hover:bg-white w-full">
                             buy
                         </button>
+
 
                     </div>
 
@@ -129,7 +131,7 @@
 
                     <div class="p-4">
 
-                        <h3 class="title mb-2 font-bold">
+                        <h3 class="titre mb-2 font-bold">
                             imongth
                         </h3>
 
@@ -137,9 +139,9 @@
                             carte disponible : 10
                         </p>
                         <span class="prix text-purple-400">70 dh</span>
-                        <button  class="ajouter block rounded-lg bg-[#FFC247]
+                        <button class="ajouter block rounded-lg bg-[#FFC247]
                                   py-2 text-center font-bold text-black
-                                  hover:bg-white">
+                                  hover:bg-white w-full">
                             buy
                         </button>
 
@@ -158,7 +160,7 @@
 
                     <div class="p-4">
 
-                        <h3 class="title mb-2 font-bold">
+                        <h3 class="titre mb-2 font-bold">
                             yudjin
                         </h3>
 
@@ -168,11 +170,12 @@
 
                         </p>
                         <span class="prix text-purple-400">100dh</span>
-                           <button  class="ajouter block rounded-lg bg-[#FFC247]
+                        <button class="ajouter block rounded-lg bg-[#FFC247]
                                   py-2 text-center font-bold text-black
-                                  hover:bg-white">
-                        buy
-                    </button>
+                                  hover:bg-white w-full">
+                            buy
+                        </button>
+
 
                     </div>
 
@@ -217,7 +220,7 @@
 
                     <div class="p-4">
 
-                        <h3 class="title mb-2 font-bold">
+                        <h3 class="titre mb-2 font-bold">
                             Carte piège
                         </h3>
 
@@ -225,11 +228,12 @@
                             10 dh
                         </p>
 
-                       <button href="shop.html" class="ajouter block rounded-lg bg-[#FFC247]
+                        <button class="ajouter block rounded-lg bg-[#FFC247]
                                   py-2 text-center font-bold text-black
-                                  hover:bg-white">
-                        buy
-                    </button>
+                                  hover:bg-white w-full">
+                            buy
+                        </button>
+
 
                     </div>
 
@@ -247,19 +251,18 @@
 
                     <div class="p-4">
 
-                        <h3 class="title mb-2 font-bold">
+                        <h3 class="titre mb-2 font-bold">
                             Carte piège légendaire
                         </h3>
 
                         <p class="prix mb-4 text-sm text-gray-400">
                             40 dh
                         </p>
-
-                           <button href="shop.html" class="ajouter block rounded-lg bg-[#FFC247]
+                        <button class="ajouter block rounded-lg bg-[#FFC247]
                                   py-2 text-center font-bold text-black
-                                  hover:bg-white">
-                        buy
-                    </button>
+                                  hover:bg-white w-full">
+                            buy
+                        </button>
 
                     </div>
 
@@ -277,7 +280,7 @@
 
                     <div class="p-4">
 
-                        <h3 class="title mb-2 font-bold">
+                        <h3 class="titre mb-2 font-bold">
                             Carte piège
                         </h3>
 
@@ -285,11 +288,12 @@
                             20 dh
                         </p>
 
-                        <button href="shop.html" class="ajouter block rounded-lg bg-[#FFC247]
-                                  py-2 text-center font-bold text-black 
-                                  hover:bg-white">
-                        buy
-                    </button>
+                         <button class="ajouter block rounded-lg bg-[#FFC247]
+                                  py-2 text-center font-bold text-black
+                                  hover:bg-white w-full" >
+                            buy
+                        </button>
+
                     </div>
 
                 </article>
@@ -305,7 +309,7 @@
 
                     <div class="p-4">
 
-                        <h3 class="title mb-2 font-bold">
+                        <h3 class="titre mb-2 font-bold">
                             Carte piège
                         </h3>
 
@@ -313,11 +317,12 @@
                             50dh
                         </p>
 
-                         <button href="shop.html" class="ajouter block rounded-lg bg-[#FFC247]
+                         <button class="ajouter block rounded-lg bg-[#FFC247]
                                   py-2 text-center font-bold text-black
-                                  hover:bg-white">
-                        buy
-                    </button>
+                                  hover:bg-white w-full" >
+                            buy
+                        </button>
+
 
                     </div>
 
@@ -328,7 +333,7 @@
         </section>
     </div>
     <!-- panier buy and totale -->
-    <section id="panier" class="mx-auto max-w-7xl px-5 py-10">
+    <section id="sectionPanier" class="mx-auto max-w-7xl px-5 py-10">
 
         <div class="rounded-2xl border border-amber-500/30 bg-[#18120d] p-5 md:p-8">
 
@@ -344,13 +349,8 @@
                 </button>
 
             </div>
-            <div id="listePanier" class="space-y-4">
-
-                <p class="py-6 text-center text-gray-400">
-                    Votre panier est vide.
-                </p>
-
-            </div>
+            <p id="panierVide" class="py-6 text-center text-gray-400">Votre panier est vide.</p>
+            <ul id="panier" class="space-y-4"></ul>
 
 
             <div class="mt-6 border-t border-amber-500/20 pt-6">
@@ -372,9 +372,7 @@
                         Total :
                     </p>
 
-                    <p id="totalPrix" class="text-2xl font-bold text-amber-400">
-                        0 DH
-                    </p>
+                    <p class="text-2xl font-bold text-amber-400"><span id="total">0</span> DH</p>
 
                 </div>
                 <button id="commander" type="button"
@@ -452,7 +450,7 @@
                     Ajoutez des pièces uniques à votre collection.
                 </p>
 
-                <a href="shop.html" class="inline-block rounded-lg border
+                <a href="boutique.html" class="inline-block rounded-lg border
                               border-[#FFC247] px-5 py-3
                               font-bold text-[#FFC247]
                               hover:bg-[#FFC247] hover:text-black">
@@ -489,5 +487,8 @@
         </div>
 
     </section>
+
+    <script src="data.js " defer></script>
+</body>
 
 </html>
