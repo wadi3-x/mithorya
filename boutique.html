@@ -11,18 +11,26 @@
 </head>
 
 <body class="bg-[#080611] text-white">
-    <header class="flex items-center bg-black justify-between px-[50px] py-[25px] ">
+  <header class="flex flex-wrap items-center justify-between
+               gap-3 bg-black p-3 md:flex-nowrap md:px-8">
 
-        <a href="" class="grid place-items-center w-[120px] h-[18px] rounded-lg text-[#111] font-black "><img
-                class="w-[50px] object-cover rounded-[15px]" src="img/Emblème Yu-Gi-Oh! aux énergies mystiques.png"
-                alt=""></a>
-        <ul class="flex items-center gap-12 list-none font-['Inter',sans-serif]">
-            <li><a href="index.html" class="text-[#FFC247]"> Home </a></li>
+
+    <a href="index.html">
+        <img src="img/Emblème Yu-Gi-Oh! aux énergies mystiques.png"
+             alt="Logo"
+             class="w-12 md:w-20">
+    </a>
+
+  
+    <nav class="order-3 w-full md:order-none md:w-auto">
+        <ul class="flex flex-wrap justify-center gap-4 text-sm md:gap-6">
             <li><a href="boutique.html" class="hover:text-[#FFC247]">Boutique</a></li>
-            <li><a href="shop.html" class="hover:text-[#FFC247]"> boosters</a></li>
-            <li><a href="Grimoire.html" class="hover:text-[#FFC247]">Ma collection</a></li>
+            <li><a href="Chamber.html" class="hover:text-[#FFC247]">Boosters</a></li>
+            <li><a href="Grimoire.html" class="hover:text-[#FFC247]">Collection</a></li>
             <li><a href="Deck .html" class="hover:text-[#FFC247]">Deck</a></li>
         </ul>
+    </nav>
+
         <a href="#sectionPanier" aria-label="Voir mon panier"
             class="relative rounded-lg border border-purple-500 bg-[#291252] px-3 py-2 hover:border-[#FFC247]">
             Panier
@@ -32,7 +40,7 @@
 
     </header>
 
-    <img class="w-full h-100" src="img/Portail des cartes légendaires.png" alt="">
+     <img class="h-40 w-full object-cover sm:h-64 md:h-96" src="img/Portail des cartes légendaires.png" alt="">
     <!-- les cartses -->
     <div id="catalogue">
         <section class="px-6 py-16 md:px-12">
@@ -392,7 +400,7 @@
 
     <!-- les exploores -->
 
-    <section class="px-6 py-12 md:px-12">
+     <section class="px-6 py-12 md:px-12">
 
         <div class="mb-10 text-center">
 
@@ -461,7 +469,7 @@
 
 
 
-            <article class="produit rounded-2xl border border-purple-900
+             <article class="rounded-2xl border border-purple-900
                                 bg-[#130D23] p-6 shadow-lg">
 
                 <img src="img/9fde3d060402b0ec4957fd7db092a896.jpg" alt="Cartes fantastiques" class="mb-5 h-100 w-full rounded-xl

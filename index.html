@@ -274,20 +274,28 @@
 </head>
 
 <body class="font-['Inter',sans-serif] bg-[#080611] text-white">
-    <main class="bg-[url('img/Duel%20mystique%20entre%20lumière%20et%20ombre.png')] ">
+    <main class="bg-[url('img/Duel%20mystique%20entre%20lumière%20et%20ombre.png')] bg-cover bg-center">
         <!-- header -->
-        <header class="flex items-center bg-black justify-between px-[50px] py-[25px] ">
+        <header class="flex flex-wrap items-center justify-between
+               gap-3 bg-black p-3 md:flex-nowrap md:px-8">
 
-            <a href="" class="grid place-items-center w-[120px] h-[18px] rounded-lg text-[#111] font-black "><img
-                    class="w-[50px] object-cover rounded-[15px]" src="img/Emblème Yu-Gi-Oh! aux énergies mystiques.png"
-                    alt=""></a>
-            <ul class="flex items-center gap-12 list-none font-['Inter',sans-serif]">
-                <li><a href="acceuil.html" class="text-[#FFC247]"> Home </a></li>
-                <li><a href="boutique.html" class="hover:text-[#FFC247]">Boutique</a></li>
-                <li><a href="Chamber.html" class="hover:text-[#FFC247]"> boosters</a></li>
-                <li><a href="Grimoire.html" class="hover:text-[#FFC247]">Ma collection</a></li>
-                <li><a href="Deck .html" class="hover:text-[#FFC247]">Deck</a></li>
-            </ul>
+  
+    <a href="index.html">
+        <img src="img/Emblème Yu-Gi-Oh! aux énergies mystiques.png"
+             alt="Logo"
+             class="w-12 md:w-20">
+    </a>
+
+  
+    <nav class="order-3 w-full md:order-none md:w-auto">
+        <ul class="flex flex-wrap justify-center gap-4 text-sm md:gap-6">
+            <li><a href="boutique.html" class="hover:text-[#FFC247]">Boutique</a></li>
+            <li><a href="Chamber.html" class="hover:text-[#FFC247]">Boosters</a></li>
+            <li><a href="Grimoire.html" class="hover:text-[#FFC247]">Collection</a></li>
+            <li><a href="Deck .html" class="hover:text-[#FFC247]">Deck</a></li>
+        </ul>
+    </nav>
+
             <a href="shop.html" aria-label="Voir mon panier"
                 class="relative rounded-lg border border-purple-500 bg-[#291252] px-3 py-2 hover:border-[#FFC247]">
                 Panier</a>
@@ -295,10 +303,12 @@
         </header>
         <!-- ecriture li kyna wasst tsswira -->
         <section
-            class="min-h-[300px] flex items-center px-10 py-[30px] grid grid-cols-2 gap-8 bg-gradient-to-r from-black">
+            class="grid min-h-[300px] grid-cols-1 items-center gap-8 bg-gradient-to-r from-black px-5 py-10 md:grid-cols-2 md:px-10">
 
             <div class="max-w-[650px]">
-                <h1 class="text-[80px] leading-[1.05] mb-[30px] text-black/50 [text-shadow:0_2px_5px_#FFC247]">CONSTRUIS
+                <h1
+                    class="mb-6 text-4xl leading-[1.05] text-black/50 [text-shadow:0_2px_5px_#FFC247] sm:text-6xl md:mb-[30px] md:text-[80px]">
+                    CONSTRUIS
                     TON DECK.<br>
                     GAGNE TON DUEL.</h1>
 
@@ -308,8 +318,8 @@
                     au même endroit.
                 </p>
 
-                <div class="flex gap-[18px]">
-                    <a href="shop.html"
+                <div class="flex flex-wrap gap-[18px]">
+                    <a href="boutique.html"
                         class="px-[30px] py-5 rounded-xl no-underline font-bold bg-[#ffbf3f] text-[#111]">
                         Voir la boutique
                     </a>
@@ -319,19 +329,20 @@
                         Ouvrir un booster
                     </a>
                 </div>
-            </div>
+
             </div>
         </section>
     </main>
     <!-- categories sous forme img -->
     <section class="px-6 py-16 md:px-12">
         <div class="mb-10 text-center">
-          <h1 class="text-3xl font-black uppercase
+            <h1 class="text-3xl font-black uppercase
                            text-[#FFC247] md:text-5xl">les categories</h1>
-            <p class="mt-4 text-gray-400">ne contients 4 categories dragon and golem and carte piege and humain warriors</p>
-         </div>   
-        <div class=" justify-between flex gap-12 w-[200px] mt-10 ml-[230px]">
-          
+            <p class="mt-4 text-gray-400">ne contients 4 categories dragon and golem and carte piege and humain warriors
+            </p>
+        </div>
+           <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
+
             <img src="img/83c5a1014dce747d6b81e1f8b331663a.jpg" alt="">
             <img src="img/8ead12008b9c998abac27438bb0e8dd1.jpg" alt="">
             <img src="img/82bc6f77f2fb7c6da50b44626dd4aaad.jpg" alt="">
@@ -755,3 +766,7 @@
 
 
     </section> -->
+    </script>
+</body>
+ 
+</html>
