@@ -146,3 +146,24 @@ btnVider.addEventListener('click', () => {
     nombre = 0;
     majAffichage();
 });
+ function validerCommande() {
+            const panier = document.querySelector("#panier");
+            const total = document.querySelector("#total");
+
+            if (!panier || panier.children.length === 0) {
+                alert("Votre panier est vide !");
+                return;
+            }
+
+       
+            const commande = {
+                produits: panier.innerText,
+                total: total ? total.innerText : "0",
+                date: new Date().toLocaleString()
+            };
+
+            localStorage.setItem("derniereCommande", JSON.stringify(commande));
+
+            alert("Commande validée ! Vous allez découvrir les boosters.");
+            window.location.href = "Chamber.html";
+        }
