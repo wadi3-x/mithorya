@@ -1,200 +1,76 @@
+
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes boosters - Mythoria</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-
-
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    @keyframes ouvrir { from { transform: scale(1); opacity: 1; } to { transform: scale(.5); opacity: 0; } }
+    .animation-booster { animation: ouvrir .5s ease forwards; }
+    @keyframes apparaitre { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    .carte-animee { animation: apparaitre .4s ease both; }
+  </style>
 </head>
+<body class="min-h-screen bg-[#080611] text-white">
+  <header class="flex flex-wrap items-center justify-between gap-3 bg-black p-4 md:px-8">
+    <a href="index.html"><img class="w-14 md:w-20" src="img/Emblème Yu-Gi-Oh! aux énergies mystiques.png" alt="Logo Mythoria"></a>
+    <nav class="flex flex-wrap gap-4 text-sm md:text-base">
+      <a href="index.html" class="hover:text-[#FFC247]">Accueil</a>
+      <a href="boutique.html" class="hover:text-[#FFC247]">Boutique</a>
+      <a href="Chamber.html" class="text-[#FFC247]">Boosters</a>
+      <a href="Grimoire.html" class="hover:text-[#FFC247]">Collection</a>
+    </nav>
+  </header>
+  <main class="mx-auto max-w-6xl px-5 py-12">
 
-<body class="bg-[#080611] text-white">
-    <header class="flex items-center bg-black justify-between px-[50px] py-[25px] ">
+    <h1 class="mb-3 text-center text-3xl font-black uppercase text-[#FFC247] md:text-5xl">
+        Mes boosters
+    
+    </h1>
 
-        <a href="" class="grid place-items-center w-[120px] h-[18px] rounded-lg text-[#111] font-black "><img
-                class="w-[50px] object-cover rounded-[15px]" src="img/Emblème Yu-Gi-Oh! aux énergies mystiques.png"
-                alt=""></a>
-        <ul class="flex items-center gap-12 list-none font-['Inter',sans-serif]">
-            <li><a href="acceuil.html" class="text-[#FFC247]"> Home </a></li>
-            <li><a href="boutique.html" class="hover:text-[#FFC247]">Boutique</a></li>
-            <li><a href="shop.html" class="hover:text-[#FFC247]"> boosters</a></li>
-            <li><a href="Grimoire.html" class="hover:text-[#FFC247]">Ma collection</a></li>
-            <li><a href="Deck .html" class="hover:text-[#FFC247]">Deck</a></li>
-        </ul>
-        <a href="#sectionPanier" aria-label="Voir mon panier"
-            class="relative rounded-lg border border-purple-500 bg-[#291252] px-3 py-2 hover:border-[#FFC247]">
-            Panier
-            <span id="badgePanier"
-                class="absolute -right-2 -top-2 grid h-5 w-5 place-items-center rounded-full bg-[#FFC247] text-xs font-bold text-black">0</span>
-        </a>
+    <p class="mb-10 text-center text-gray-300">
+        Clique sur « Ouvrir le booster » pour découvrir tes cartes.
 
-    </header>
-    <div id="catalogue">
-        <section class="px-6 py-16 md:px-12">
+    </p>
 
-            <div class="mb-10 text-center">
+    <p id="messageVide" class="rounded-xl border border-purple-900 bg-[#130D23] p-6 text-center text-gray-300">
+        Aucun booster. 
+        <a href="boutique.html" class="text-[#FFC247] underline">Visiter la boutique</a>
+    </p>
+    <section id="mesBoosters" class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4"></section>
 
-                <p class="mb-3 font-bold uppercase tracking-widest
-                          text-purple-400">
-                    premiene cartes
-                </p>
+    <section id="zoneOuverture" class="mt-12 hidden rounded-2xl border border-purple-800 bg-[#130D23] p-6">
 
-                <h2 class="text-3xl font-black uppercase
-                           text-[#FFC247] md:text-5xl">
-                    ---take your tickets---
-                </h2>
+      <h2 id="titreOuverture" class="mb-4 text-center text-2xl font-bold text-[#FFC247]"></h2>
 
-                <p class="mt-4 text-gray-400">
-                    Trouvez les cartes qui feront briller votre collection.
-                </p>
-
-            </div>
-
-
-            <div class="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-7">
-
-
-                <article class="overflow-hidden rounded-2xl
-                                border border-purple-900 bg-[#130D23]
-                                transition duration-300
-                                hover:-translate-y-2 hover:border-[#FFC247]">
-
-                    <img src="img/BROL_550.png" alt="Carte de collection numéro 1" class="h-56 w-full object-contain bg-black p-3
-                               md:h-72">
-
-                    <div class="p-4">
-
-                        <h3 class="titre mb-2 font-bold">
-                            pack mystique
-                        </h3>
-
-                        <p class="mb-4 text-sm text-gray-400">
-                            Carte de collection
-                        </p>
-                        <p class="mb-4 text-sm text-gray-400">
-                            dispnibles and differentes cartes : 10
-                        </p>
-
-
-                        <button class="ajouter block rounded-lg bg-[#FFC247]
-                                  py-2 text-center font-bold text-black
-                                  hover:bg-white w-full">
-                            buy
-                        </button>
-
-                        </a>
-
-                    </div>
-
-                </article>
+      <img id="imageOuverture" src="" alt="Booster" class="mx-auto h-56 w-full max-w-xs object-contain">
 
 
 
-                <article class="overflow-hidden rounded-2xl
-                                border border-purple-900 bg-[#130D23]
-                                transition duration-300
-                                hover:-translate-y-2 hover:border-[#FFC247]">
 
-                    <img src="img/ra05_foil_550x500.png" alt="Carte de collection numéro 2" class="h-56 w-full object-contain bg-black p-3
-                               md:h-72">
-
-                    <div class="p-4">
-
-                        <h3 class="titre mb-2 font-bold">
-                            pack légendaire
-                        </h3>
-
-                        <p class="mb-4 text-sm text-gray-400">
-                            Collection spéciale
-                        </p>
-                        <p class="mb-4 text-sm text-gray-400">
-                            dispnibles and differentes cartes : 10
-                        </p>
-
-                        <button class="ajouter block rounded-lg bg-[#FFC247]
-                                  py-2 text-center font-bold text-black
-                                  hover:bg-white w-full">
-                            buy
-                        </button>
+      <p id="messageOuverture" class="my-5 text-center text-gray-300"></p>
 
 
-                    </div>
+      <div id="cartesObtenues" class="grid grid-cols-1 gap-4 sm:grid-cols-3"></div>
 
-                </article>
-
-
-
-                <article class="overflow-hidden rounded-2xl
-                                border border-purple-900 bg-[#130D23]
-                                transition duration-300
-                                hover:-translate-y-2 hover:border-[#FFC247]">
-
-                    <img src="img/LED6_Foil_EN_Mock_EN.png" alt="Carte de collection numéro 3" class="h-56 w-full object-contain bg-black p-3
-                               md:h-72">
-
-                    <div class="p-4">
-
-                        <h3 class="titre mb-2 font-bold">
-                            pack mystérieuse
-                        </h3>
-
-                        <p class="mb-4 text-sm text-gray-400">
-                            Série exclusive
-                        </p>
-                        <p class="mb-4 text-sm text-gray-400">
-                            dispnibles and differentes cartes : 10
-                        </p>
-
-                        <button class="ajouter block rounded-lg bg-[#FFC247]
-                                  py-2 text-center font-bold text-black
-                                  hover:bg-white w-full">
-                            buy
-                        </button>
+      <div class="mt-6 text-center"><button id="fermerOuverture" class="rounded-lg border border-[#FFC247] px-5 py-2 text-[#FFC247] hover:bg-[#FFC247] hover:text-black">Fermer</button></div>
 
 
-                    </div>
+    </section>
 
-                </article>
+    <div class="mt-10 text-center"><a href="boutique.html" class="inline-block rounded-lg bg-[#FFC247] px-5 py-3 font-bold text-black">
+        Retour à la boutique</a>
+    </div>
+ 
 
+</main>
 
-                <article class="overflow-hidden rounded-2xl
-                                border border-purple-900 bg-[#130D23]
-                                transition duration-300
-                                hover:-translate-y-2 hover:border-[#FFC247]">
+  <script src="data.js" defer></script>
 
-                    <img src="img/ANGU_550-1.png" alt="Carte de collection numéro 4" class="h-56 w-full object-contain bg-black p-3
-                               md:h-72">
+</body>
 
-                    <div class="p-4">
-
-                        <h3 class="titre mb-2 font-bold">
-                            pack rare
-                        </h3>
-
-                        <p class="mb-4 text-sm text-gray-400">
-                            Pour les collectionneurs
-                        </p>
-                        <p class="mb-4 text-sm text-gray-400">
-                            dispnibles and differentes cartes : 10
-                        </p>
-
-
-                        <button class="ajouter block rounded-lg bg-[#FFC247]
-                                  py-2 text-center font-bold text-black
-                                  hover:bg-white w-full">
-                            buy
-                        </button>
-
-
-                    </div>
-
-                </article>
-
-            </div>
-            <div class="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-7">
-
-                <script src="data.js " defer></script>
-
+</html>
