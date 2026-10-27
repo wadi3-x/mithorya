@@ -8,12 +8,6 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <style>
-    @keyframes ouvrir { from { transform: scale(1); opacity: 1; } to { transform: scale(.5); opacity: 0; } }
-    .animation-booster { animation: ouvrir .5s ease forwards; }
-    @keyframes apparaitre { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-    .carte-animee { animation: apparaitre .4s ease both; }
-  </style>
 </head>
 <body class="min-h-screen bg-[#080611] text-white">
   <header class="flex flex-wrap items-center justify-between gap-3 bg-black p-4 md:px-8">
@@ -72,5 +66,25 @@
   <script src="data.js" defer></script>
 
 </body>
+<foooter class="bg-[#050817]  border-[#b88a44]/40 px-6 py-6">
+  <div class="max-w-7xl mx-auto flex flex-col items-center gap-3 text-center">
+    <a href="index.html" class="text-xl font-serif font-bold text-[#d6ad60]">mithoria</a>
+    <p class="text-sm text-gray-400 font-serif font-bold">
+      take your cartes , w keep going to warriores grimoires
+    </p>
+    <div class=" gap-5 text-sm text-gray-400 ">
+      <a href="index.html" class="hover:text-[#d6ad60] transition ">Acceuil</a>
+      <a href="boutique.html" class="hover:text-[#d6ad60] transition">Boutique</a>
+      <a href="Chamber.html" class="hover:text-[#d6ad60] transition">chambers</a>
+      <a href="Grimoire.html" class="hover:text-[#d6ad60] transition"> boosters</a>
+      <a href="Deck .html" class="hover:text-[#d6ad60] transition">deck</a>
+      <div class="w-full max-w-md h-px bg-gradient-to-r from-transparent via-[#b88a44]/50 to-transparent">
+        <p class="text-xs text-gray-500">
+          © 2026 Mythoria — Tous droits réservés.
+        </p>
+      </div>
+    </div>
+  </div>
+</foooter>
 
 </html>

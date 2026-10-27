@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grimoire - Mythoria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="min-h-screen bg-[#080611] text-white">
+
+  <header class="flex flex-wrap items-center justify-between gap-3 bg-black p-4 md:px-8">
+    <a href="index.html"><img class="w-14 md:w-20" src="img/Emblème Yu-Gi-Oh! aux énergies mystiques.png"
+        alt="Logo Mythoria"></a>
+    <nav class="flex flex-wrap gap-4 text-sm md:text-base">
+      <a href="boutique.html" class="hover:text-[#FFC247]">Boutique</a>
+      <a href="Chamber.html" class="hover:text-[#FFC247]">Boosters</a>
+      <a href="Grimoire.html" class="text-[#FFC247]">Collection</a>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-4 py-8">
+    <h1 class="mb-6 text-center text-3xl font-black uppercase text-[#FFC247] md:text-5xl">Mon grimoire</h1>
+
+
+    <div class="mb-6 flex flex-wrap justify-center gap-3 text-black">
+      <select id="filtreType" class="rounded-lg px-3 py-2">
+        <option value="">Tous les types</option>
+      </select>
+      <!-- <select id="filtreRarete" class="rounded-lg px-3 py-2">
+        <option value="">Toutes les raretés</option>
+        <option>Commune</option>
+        <option>Rare</option>
+        <option>Épique</option>
+        <option>Légendaire</option>
+      </select> -->
+    </div>
+
+
+
+    <div >
+      <div id="livre" class="relative mx-auto min-w-[700px] bg-[length:100%_100%] text-[#3b2a14]"
+        style="aspect-ratio: 1426/752">
+        <div id="pageG" class="absolute left-[8%] top-[6%] grid h-[86%] w-[35%] grid-cols-2 grid-rows-2 gap-2"></div>
+        <div id="pageD" class="absolute left-[51%] top-[6%] grid h-[86%] w-[35%] grid-cols-2 grid-rows-2 gap-2"></div>
+      </div>
+    </div>
+
+
+    <div id="modal" class=" inset-0  place-items-center bg-black/70 p-4">
+      <div id="detail" class=" w-full max-w-sm rounded-2xl border border-[#FFC247] bg-[#130D23] p-5"></div>
+    </div>
+
+
+    <script src="data.js" defer></script>
+</body>
+<foooter class="bg-[#050817]  border-[#b88a44]/40 px-6 py-6">
+  <div class="max-w-7xl mx-auto flex flex-col items-center gap-3 text-center">
+    <a href="index.html" class="text-xl font-serif font-bold text-[#d6ad60]">mithoria</a>
+    <p class="text-sm text-gray-400 font-serif font-bold">
+      take your cartes , w keep going to warriores grimoires
+    </p>
+    <div class=" gap-5 text-sm text-gray-400 ">
+      <a href="index.html" class="hover:text-[#d6ad60] transition ">Acceuil</a>
+      <a href="boutique.html" class="hover:text-[#d6ad60] transition">Boutique</a>
+      <a href="Chamber.html" class="hover:text-[#d6ad60] transition">chambers</a>
+      <a href="Grimoire.html" class="hover:text-[#d6ad60] transition"> boosters</a>
+      <a href="Deck .html" class="hover:text-[#d6ad60] transition">deck</a>
+      <div class="w-full max-w-md h-px bg-gradient-to-r from-transparent via-[#b88a44]/50 to-transparent">
+        <p class="text-xs text-gray-500">
+          © 2026 Mythoria — Tous droits réservés.
+        </p>
+      </div>
+    </div>
+  </div>
+</foooter>
+
+</html>
