@@ -32,19 +32,17 @@
       Panier</a>
 
   </header>
-  <main class="mx-auto max-w-5xl px-4 py-8">
-    <h1 class="mb-6 text-center text-3xl font-black uppercase text-[#FFC247] md:text-5xl">Mon grimoire</h1>
-
-
-    <div class="mb-6 flex flex-wrap justify-center gap-3 text-black">
-      <select id="filtreType" class="rounded-lg px-3 py-2">
-        <option value="">Tous les cartes selectionner</option>
-      </select>
-
- 
+  <main class="mx-auto max-w-6xl px-4 py-8">
+    <h1 class="mb-3 text-center text-3xl font-black uppercase text-[#FFC247] md:text-5xl">Mon deck</h1>
+    <p class="mb-8 text-center text-gray-300">Choisis tes cartes pour construire ton deck</p>
+ <section class="mb-8 rounded-xl border border-purple-900 bg-[#130D23] p-4">
+    <div class=" flex flex-wrap justify-between items-center gap-3 ">
+      <h2 class="text-xl font-bold text-[#FFC247]">Mon deck:<span id="nomber">0</span>/20 cartes</span></h2>
+    <button id="sauver" class="roounded-lg bg-[#FFC247] px-4 py-2 font-bold hover:bg-white">Enregistrer le deck</button>
+    </div>
     </div>
 
-
+</section>
 </body>
 
   <script src="data.js" defer></script>
