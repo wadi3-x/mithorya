@@ -11,15 +11,30 @@
 
 <body class="min-h-screen bg-[#080611] text-white">
 
-  <header class="flex flex-wrap items-center justify-between gap-3 bg-black p-4 md:px-8">
-    <a href="index.html"><img class="w-14 md:w-20" src="img/Emblème Yu-Gi-Oh! aux énergies mystiques.png"
-        alt="Logo Mythoria"></a>
-    <nav class="flex flex-wrap gap-4 text-sm md:text-base">
-      <a href="boutique.html" class="hover:text-[#FFC247]">Boutique</a>
-      <a href="Chamber.html" class="hover:text-[#FFC247]">Boosters</a>
-      <a href="Grimoire.html" class="text-[#FFC247]">Collection</a>
-    </nav>
-  </header>
+ <header class="flex flex-wrap items-center justify-between
+               gap-3 bg-black p-3 md:flex-nowrap md:px-8">
+
+
+            <a href="index.html">
+                <img src="img/Emblème Yu-Gi-Oh! aux énergies mystiques.png" alt="Logo" class="w-12 md:w-20">
+            </a>
+
+
+            <nav class="order-3 w-full md:order-none md:w-auto">
+                <ul class="flex flex-wrap justify-center gap-4 text-sm md:gap-6">
+                    <li><a href="boutique.html" class="hover:text-[#FFC247]">Boutique</a></li>
+                    <li><a href="Chamber.html" class="hover:text-[#FFC247]">Boosters</a></li>
+                    <li><a href="Grimoire.html" class="hover:text-[#FFC247]">Collection</a></li>
+                    <li><a href="Deck .html" class="hover:text-[#FFC247]">Deck</a></li>
+                </ul>
+            </nav>
+
+            <a href="shop.html" aria-label="Voir mon panier"
+                class="relative rounded-lg border border-purple-500 bg-[#291252] px-3 py-2 hover:border-[#FFC247]">
+                Panier</a>
+
+        </header>
+      
 
   <main class="mx-auto max-w-5xl px-4 py-8">
     <h1 class="mb-6 text-center text-3xl font-black uppercase text-[#FFC247] md:text-5xl">Mon grimoire</h1>
