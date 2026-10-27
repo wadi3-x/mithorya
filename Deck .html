@@ -40,9 +40,18 @@
       <h2 class="text-xl font-bold text-[#FFC247]">Mon deck:<span id="nomber">0</span>/20 cartes</span></h2>
     <button id="sauver" class="roounded-lg bg-[#FFC247] px-4 py-2 font-bold hover:bg-white">Enregistrer le deck</button>
     </div>
+    <p id="message" class="mt-3 text-sm text-gray-300">ton deck est vide.</p>
+    <div id="deck" class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5"></div>
+    <div class="mt-5 border-t border-purple-900 pt-4">
+      <h3 class="mb-2 font-bold text-[#FFC247]">Statistiques du deck</h3>
+      <p id="stats" class="text-sm text-gray-300">Aucune carte selectionnee.</p>
     </div>
 
 </section>
+  <h2 class="mb-4 text-2xl font-bold text-[#FFC247]">Mes cartes disponibles</h2>
+    <p id="collectionVide" class="mb-4 hidden rounded-lg bg-[#130D23] p-4 text-center text-gray-300">Aucune carte dans ta collection. Ouvre un booster d'abord.</p>
+    <section id="collection" class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4"></section>
+  </main>
 </body>
 
   <script src="data.js" defer></script>
