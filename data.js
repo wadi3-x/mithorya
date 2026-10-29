@@ -95,7 +95,7 @@ if ($('#mesBoosters')) {
   const RARES = ['Rare', 'Épique', 'Légendaire'];
 
   function afficherBoosters(animer = true) {
-    // on n'affiche QUE les boosters pas encore ouverts
+   
     const boosters = lire(BOOSTERS).filter(b => !b.ouvert);
     $('#messageVide').classList.toggle('hidden', boosters.length > 0);
 
@@ -138,7 +138,7 @@ if ($('#mesBoosters')) {
       ? '✨ Une carte rare ou spéciale ! Cartes ajoutées à la collection.'
       : 'Cartes ajoutées à la collection !';
 
-    afficherBoosters(false); // le booster ouvert disparaît de la liste
+    afficherBoosters(false); 
   }
 
   $('#mesBoosters').addEventListener('click', e => {
