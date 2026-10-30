@@ -90,6 +90,18 @@ if ($('#mesBoosters')) {
     { nom: 'Piège du portail', type: 'Piège', rarete: 'Épique', attaque: 1500, defense: 200, image: 'img/5db1125a0fb6a2bf78bec71f60a4239a.jpg' },
     { nom: 'Magie des étoiles', type: 'Magie', rarete: 'Rare', attaque: 4500, defense: 2000, image: 'img/f39d537884a4437e089f498b23e703cf.jpg' },
     { nom: 'Chevalier du crépuscule', type: 'Monstre', rarete: 'Commune', attaque: 1700, defense: 1400, image: 'img/9fde3d060402b0ec4957fd7db092a896.jpg' },
+           { nom: 'Dragon des ombres', type: 'Monstre', rarete: 'Rare', attaque: 4000, defense: 3000, image: 'img/00ad8960c2af3f7492316da92d0968c6.jpg' },
+    { nom: 'Gardien mystique', type: 'Monstre', rarete: 'Commune', attaque: 3000, defense: 2500, image: 'img/6ae2f1aa57418236e96264f6fc1bc163.jpg' },
+    { nom: 'Phénix légendaire', type: 'Monstre', rarete: 'Légendaire', attaque: 2800, defense: 3200, image: 'img/6fb9b5f2884ff1814fe2fa735a3b494a.jpg' },
+    { nom: 'Piège du portail', type: 'Piège', rarete: 'Épique', attaque: 5000, defense: 5000, image: 'img/7aac9c5c8d7c7f6f15e8b8a9e4f5aff6.jpg' },
+    { nom: 'Magie des étoiles', type: 'Magie', rarete: 'Rare', attaque: 2800, defense: 1400, image: 'img/95cf3c08814dfd0bea369e1c7d28e62f.jpg' },
+    { nom: 'Chevalier du crépuscule', type: 'Monstre', rarete: 'Commune', attaque: 4000, defense: 4000, image: 'img/697d37361464886ecda0ce1ca83c84fa.jpg' },
+               { nom: 'Dragon des ombres', type: 'Monstre', rarete: 'Rare', attaque: 3000, defense: 1500, image: 'img/827ccb73297da9d21354c342fb692467.jpg' },
+    { nom: 'Gardien mystique', type: 'Monstre', rarete: 'Commune', attaque: 3000, defense: 2000, image: 'img/5716ce1a0dd77be4be22c895f8a8ded6.jpg' },
+    { nom: 'Phénix légendaire', type: 'Monstre', rarete: 'Légendaire', attaque: 1800, defense: 1600, image: 'img/6825c9fbd2f28d92b82d39d1e317bd27.jpg' },
+    { nom: 'Piège du portail', type: 'Piège', rarete: 'Épique', attaque: 1900, defense: 1000, image: 'img/9587b0e3f79dbbfe27e7af7e24e33e80 (1).jpg' },
+    { nom: 'Magie des étoiles', type: 'Magie', rarete: 'Rare', attaque: 4000, defense: 4000, image: 'img/521228a6edccd409fb018bd4d4374892.jpg' },
+    { nom: 'Chevalier du crépuscule', type: 'Monstre', rarete: 'Commune', attaque: 3300, defense: 3300, image: 'img/b7011a1836cdaba00ee137e0d934bdbf.jpg' },
 
   ];
   const RARES = ['Rare', 'Épique', 'Légendaire'];

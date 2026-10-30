@@ -2,86 +2,129 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aetherion Play Zone</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Lexend:wght@100..900&display=swap"
-        rel="stylesheet">
-    <style>
-        body {
-            background-image: url(img/676e5b71c3ad1a1e1c150e1f77dd04dd.jpg); font-family: ;
-        }
-.field { width: 100%; max-width: 90%; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aetherion Play Zone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Lexend:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.html">
+  <style>
+    body {
+      background-image: url(img/676e5b71c3ad1a1e1c150e1f77dd04dd.jpg);
+      font-family: ;
+    }
 
-.slot {
-  aspect-ratio: 59 / 86;
-  border: 2px dashed yellow;
-  border-radius: 6px;
-  background: rgba(0, 0, 0, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.6);
-}
+    .field {
+      width: 100%;
+      max-width: 90%;
+    }
 
-.rotate-180 .slot { transform: rotate(180deg); }
+    .slot {
+      aspect-ratio: 59 / 86;
+      border: 2px dashed yellow;
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .rotate-180 .slot {
+      transform: rotate(180deg);
+    }
 
 
-#hand .card {
-  width: 80px;
-  aspect-ratio: 59 / 86;
-  border-radius: 6px;
-  transition: transform .15s;
-}
-#hand .card:hover { transform: translateY(-12px) scale(1.1); }
-button:hover { background: purple; }
-    </style>
+    #hand .card {
+      width: 80px;
+      aspect-ratio: 59 / 86;
+      border-radius: 6px;
+      transition: transform .15s;
+    }
+
+    #hand .card:hover {
+      transform: translateY(-12px) scale(1.1);
+    }
+
+    button:hover {
+      background: purple;
+    }
+    /* header{
+      aspect-ratio:1/1
+    } */
+  </style>
 </head>
 
-
-<main class="flex flex-col lg:flex-row gap-4 p-4 w-full max-w-[1500px] mx-auto min-h-screen">
-
-
-  <aside class="lg:w-80 bg-black/60 rounded-lg p-4 ">
-    <h2 class="text-purple-400 font-bold mb-3">My Collection</h2>
-    <button class="w-full bg-black text-white font-bold py-3 rounded-lg mb-3">Draw 5 to Hand</button>
-    <p class="text-purple-300 text-sm">Deck: 0 cards</p>
-  </aside>
+<body>
+  <header class="flex flex-wrap items-center justify-center
+               gap-3 bg-black/40 p-3 md:flex-nowrap md:px-8">
 
 
-  <section class="flex-1 flex flex-col gap-3 items-center">
-    <div class="field rotate-180 bg-black/50 rounded-xl p-3 border border-red-400/40">
-      <div class="grid grid-cols-7 gap-2 mb-2">
-        <div class="slot" data-zone="gy">GY</div>
-        <div class="slot" data-zone="m1">M</div><div class="slot" data-zone="m2">M</div>
-        <div class="slot" data-zone="m3">M</div><div class="slot" data-zone="m4">M</div>
-        <div class="slot" data-zone="m5">M</div>
-        <div class="slot" data-zone="extra">Extra</div>
-      </div>
-      <!-- <div class="grid grid-cols-7 gap-2"> -->
+            <!-- <a href="index.html">
+                <img src="img/Emblème Yu-Gi-Oh! aux énergies mystiques.png" alt="Logo" class="w-12 md:w-20">
+            </a> -->
+
+
+            <nav class="order-3 w-full md:order-none md:w-auto ">
+                <ul class="flex flex-wrap  gap-4 text-sm md:gap-6 text-white ">
+                      <li><a href="index.html" class="hover:text-[#d6ad60] transition ">Acceuil</a></li>
+                    <li><a href="boutique.html" class="hover:text-[#FFC247]">Boutique</a></li>
+                    <li><a href="Chamber.html" class="hover:text-[#FFC247]">Boosters</a></li>
+                    <li><a href="Grimoire.html" class="hover:text-[#FFC247]">Collection</a></li>
+                    <li><a href="Deck .html" class="hover:text-[#FFC247]">Deck</a></li>
+                </ul>
+            </nav>
+
+  </header>
+
+
+  <main class="flex flex-col lg:flex-row gap-4 p-4 w-full max-w-[1500px] mx-auto min-h-screen">
+
+
+    <aside class="lg:w-80 bg-black/60 rounded-lg p-4 ">
+      <h2 class="text-purple-400 font-bold mb-3">My Collection</h2>
+      <button class="w-full bg-black text-white font-bold py-3 rounded-lg mb-3">Draw 5 to Hand</button>
+      <p class="text-purple-300 text-sm">Deck: 0 cards</p>
+    </aside>
+
+
+    <section class="flex-1 flex flex-col gap-3 items-center">
+      <div class="field rotate-180 bg-black/50 rounded-xl p-3 border border-red-400/40">
+        <div class="grid grid-cols-7 gap-2 mb-2">
+          <div class="slot" data-zone="gy">GY</div>
+          <div class="slot" data-zone="m1">M</div>
+          <div class="slot" data-zone="m2">M</div>
+          <div class="slot" data-zone="m3">M</div>
+          <div class="slot" data-zone="m4">M</div>
+          <div class="slot" data-zone="m5">M</div>
+          <div class="slot" data-zone="extra">Extra</div>
+        </div>
+        <!-- <div class="grid grid-cols-7 gap-2"> -->
         <!-- <div class="slot" data-zone="field">Field</div> -->
         <!-- <div class="slot" data-zone="s1">S/T</div><div class="slot" data-zone="s2">S/T</div>
         <div class="slot" data-zone="s3">S/T</div><div class="slot" data-zone="s4">S/T</div> -->
         <!-- <div class="slot" data-zone="s5">S/T</div>
         <div class="slot" data-zone="deck">Deck</div> -->
-      <!-- </div> -->
-    </div>
-
-    <button class="bg-black  text-white font-bold px-8 py-3 rounded-lg " >End Turn</button>
-
-
-    <div class="field bg-black/50 rounded-xl p-3 border border-blue-400/40">
-      <div class="grid grid-cols-7 gap-2 mb-2">
-        <div class="slot" data-zone="gy">GY</div>
-        <div class="slot" data-zone="m1">M</div><div class="slot" data-zone="m2">M</div>
-        <div class="slot" data-zone="m3">M</div><div class="slot" data-zone="m4">M</div>
-        <div class="slot" data-zone="m5">M</div>
-        <div class="slot" data-zone="extra">Extra</div>
+        <!-- </div> -->
       </div>
-      <!-- <div class="grid grid-cols-7 gap-2">
+
+      <button class="bg-black  text-white font-bold px-8 py-3 rounded-lg ">End Turn</button>
+
+
+      <div class="field bg-black/50 rounded-xl p-3 border border-blue-400/40">
+        <div class="grid grid-cols-7 gap-2 mb-2">
+          <div class="slot" data-zone="gy">GY</div>
+          <div class="slot" data-zone="m1">M</div>
+          <div class="slot" data-zone="m2">M</div>
+          <div class="slot" data-zone="m3">M</div>
+          <div class="slot" data-zone="m4">M</div>
+          <div class="slot" data-zone="m5">M</div>
+          <div class="slot" data-zone="extra">Extra</div>
+        </div>
+        <!-- <div class="grid grid-cols-7 gap-2">
         <div class="slot" data-zone="field">Field</div>
         <div class="slot" data-zone="s1">S/T</div><div class="slot" data-zone="s2">S/T</div>
         <div class="slot" data-zone="s3">S/T</div><div class="slot" data-zone="s4">S/T</div>
@@ -90,12 +133,16 @@ button:hover { background: purple; }
       </div>
     </div> -->
 
-  
-    <div class="bg-black/60 rounded-xl p-3 w-full ">
-      <p class="text-yellow-400 text-sm mb-2  ">Your hand</p>
-      <div id="hand" class="flex justify-center gap-2 min-h-[120px]">
-     
-      </div>
-    </div>
-  </section>
-</main>
+
+        <div class="bg-black/60 rounded-xl p-3 w-full ">
+          <p class="text-yellow-400 text-sm mb-2  ">Your hand</p>
+          <div id="hand" class="flex justify-center gap-2 min-h-[120px]">
+
+          </div>
+        </div>
+    </section>
+  </main>
+</body>
+<script src="data.js" defer></script>
+
+</html>
