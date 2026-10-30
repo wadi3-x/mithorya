@@ -11,13 +11,13 @@
         rel="stylesheet">
     <style>
         body {
-            background-image: url(img/1a9a5d1dab02cf6c5b86fdce80f77606.jpg); font-family: ;
+            background-image: url(img/676e5b71c3ad1a1e1c150e1f77dd04dd.jpg); font-family: ;
         }
 .field { width: 100%; max-width: 90%; }
 
 .slot {
   aspect-ratio: 59 / 86;
-  border: 2px dashed rgba(255, 255, 255, 0.4);
+  border: 2px dashed yellow;
   border-radius: 6px;
   background: rgba(0, 0, 0, 0.35);
   display: flex;
@@ -37,6 +37,7 @@
   transition: transform .15s;
 }
 #hand .card:hover { transform: translateY(-12px) scale(1.1); }
+button:hover { background: purple; }
     </style>
 </head>
 
@@ -69,7 +70,7 @@
       <!-- </div> -->
     </div>
 
-    <button class="bg-black text-white font-bold px-8 py-3 rounded-lg">End Turn</button>
+    <button class="bg-black  text-white font-bold px-8 py-3 rounded-lg " >End Turn</button>
 
 
     <div class="field bg-black/50 rounded-xl p-3 border border-blue-400/40">
@@ -91,7 +92,7 @@
 
   
     <div class="bg-black/60 rounded-xl p-3 w-full ">
-      <p class="text-yellow-400 text-sm mb-2">Your hand</p>
+      <p class="text-yellow-400 text-sm mb-2  ">Your hand</p>
       <div id="hand" class="flex justify-center gap-2 min-h-[120px]">
      
       </div>
