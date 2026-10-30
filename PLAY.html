@@ -13,126 +13,88 @@
         body {
             background-image: url(img/1a9a5d1dab02cf6c5b86fdce80f77606.jpg); font-family: ;
         }
-@font-face {
-    font-family: "Mideltank";
-    src: url("fonts/MIDELTANK_Demo.otf") format("opentype");
+.field { width: 100%; max-width: 90%; }
+
+.slot {
+  aspect-ratio: 59 / 86;
+  border: 2px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.mideltank-font {
-    font-family: "Mideltank";
+.rotate-180 .slot { transform: rotate(180deg); }
+
+
+#hand .card {
+  width: 80px;
+  aspect-ratio: 59 / 86;
+  border-radius: 6px;
+  transition: transform .15s;
 }
-
-
-
-
-
-
-        .slot {
-            width: 100%;
-            max-width: 160px;
-            aspect-ratio: 4 / 5;
-        }
+#hand .card:hover { transform: translateY(-12px) scale(1.1); }
     </style>
 </head>
 
 
-
-<main class=" gap-4 p-4 max-w-[1500px] mx-auto ">
-
-
-    <aside id="deck-play-continer"
-        class="lg:w-64 lg:shrink-0 p-4 bg-black/50 rounded-lg flex flex-col gap-3 lg:max-h-[calc(100vh-110px)] lg:sticky lg:top-4">
-        <h3 class="text-purple-400 font-bold">My Collection</h3>
-
-        <button id="draw-five-btn"
-            class="w-full bg-black hover:bg-orange-500 text-white font-bold py-3 px-4 rounded-lg shadow-md ">
-            Draw 5 to Hand
-        </button>
-
-        <div id="deck-info" class="text-sm text-purple-400">
-            Deck: <span id="deck-count">0</span> cards
-        </div>
-
-        <div id="deck-list" class="text-sm text-left overflow-y-auto flex-1 min-h-[120px] max-h-[400px]"></div>
-    </aside>
-
-    <div class="grid grid gap-4 min-w-0 ">
+<main class="flex flex-col lg:flex-row gap-4 p-4 w-full max-w-[1500px] mx-auto min-h-screen">
 
 
-        <section class="bg-black/50 rounded-lg p-4 sm:p-6 flex flex-col gap-4  ">
-
-            <div id="random-container" class="grid grid-cols-5 gap-3 sm:gap-6 justify-items-center w-[70%]">
-                <div
-                    class="slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
-                    Empty</div>
-                <div
-                    class="slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
-                    Empty</div>
-                <div
-                    class="slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
-                    Empty</div>
-                <div
-                    class="slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
-                    Empty</div>
-                <div
-                    class="slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
-                    Empty</div>
-              
-           
-
-            </div>
-
-            <div class="flex justify-center items-center border-y border-white/10 py-3">
-                <button id="end-turn-btn"
-                    class="bg-black hover:bg-orange-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-200">
-                    End Turn
-                </button>
-            </div>
-
-            <div id="player-container" class="grid grid-cols-5 gap-3 sm:gap-6 justify-items-center w-[70%]">
-                <div
-                    class="player-card slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
-                    Empty</div>
-                <div
-                    class="player-card slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
-                    Empty</div>
-                <div
-                    class="player-card slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
-                    Empty</div>
-                <div
-                    class="player-card slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
-                    Empty</div>
-                <div
-                    class="player-card slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm">
-                    Empty</div>
-            
-            </div>
-        </section>
+  <aside class="lg:w-80 bg-black/60 rounded-lg p-4 ">
+    <h2 class="text-purple-400 font-bold mb-3">My Collection</h2>
+    <button class="w-full bg-black text-white font-bold py-3 rounded-lg mb-3">Draw 5 to Hand</button>
+    <p class="text-purple-300 text-sm">Deck: 0 cards</p>
+  </aside>
 
 
-        <section class="bg-black/50 rounded-lg p-4">
-            <h3 class="text-yellow-400 text-sm mb-3">Your hand</h3>
-            <div id="hand-cards" class="grid grid-cols-5 gap-3 sm:gap-6 justify-items-center w-[70%] ">
-                <div class="handCard slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm"
-                    draggable="true">Empty</div>
-                <div class="handCard slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm"
-                    draggable="true">Empty</div>
-                <div class="handCard slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm"
-                    draggable="true">Empty</div>
-                <div class="handCard slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm"
-                    draggable="true">Empty</div>
-                <div class="handCard slot border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/50 text-sm"
-                    draggable="true">Empty</div>
-              
-             
-
-
-            </div>
-        </section>
+  <section class="flex-1 flex flex-col gap-3 items-center">
+    <div class="field rotate-180 bg-black/50 rounded-xl p-3 border border-red-400/40">
+      <div class="grid grid-cols-7 gap-2 mb-2">
+        <div class="slot" data-zone="gy">GY</div>
+        <div class="slot" data-zone="m1">M</div><div class="slot" data-zone="m2">M</div>
+        <div class="slot" data-zone="m3">M</div><div class="slot" data-zone="m4">M</div>
+        <div class="slot" data-zone="m5">M</div>
+        <div class="slot" data-zone="extra">Extra</div>
+      </div>
+      <!-- <div class="grid grid-cols-7 gap-2"> -->
+        <!-- <div class="slot" data-zone="field">Field</div> -->
+        <!-- <div class="slot" data-zone="s1">S/T</div><div class="slot" data-zone="s2">S/T</div>
+        <div class="slot" data-zone="s3">S/T</div><div class="slot" data-zone="s4">S/T</div> -->
+        <!-- <div class="slot" data-zone="s5">S/T</div>
+        <div class="slot" data-zone="deck">Deck</div> -->
+      <!-- </div> -->
     </div>
+
+    <button class="bg-black text-white font-bold px-8 py-3 rounded-lg">End Turn</button>
+
+
+    <div class="field bg-black/50 rounded-xl p-3 border border-blue-400/40">
+      <div class="grid grid-cols-7 gap-2 mb-2">
+        <div class="slot" data-zone="gy">GY</div>
+        <div class="slot" data-zone="m1">M</div><div class="slot" data-zone="m2">M</div>
+        <div class="slot" data-zone="m3">M</div><div class="slot" data-zone="m4">M</div>
+        <div class="slot" data-zone="m5">M</div>
+        <div class="slot" data-zone="extra">Extra</div>
+      </div>
+      <!-- <div class="grid grid-cols-7 gap-2">
+        <div class="slot" data-zone="field">Field</div>
+        <div class="slot" data-zone="s1">S/T</div><div class="slot" data-zone="s2">S/T</div>
+        <div class="slot" data-zone="s3">S/T</div><div class="slot" data-zone="s4">S/T</div>
+        <div class="slot" data-zone="s5">S/T</div>
+        <div class="slot" data-zone="deck">Deck</div>
+      </div>
+    </div> -->
+
+  
+    <div class="bg-black/60 rounded-xl p-3 w-full ">
+      <p class="text-yellow-400 text-sm mb-2">Your hand</p>
+      <div id="hand" class="flex justify-center gap-2 min-h-[120px]">
+     
+      </div>
+    </div>
+  </section>
 </main>
-
-<!-- <script src="js/play.js"></script> -->
-</body>
-
-</html>
