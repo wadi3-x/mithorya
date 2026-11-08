@@ -661,7 +661,6 @@ function adversaireJoue() {
   let hasard = Math.floor(Math.random() * mainAdv.length);
   let carte = mainAdv[hasard];
 
-  let mode = Number(carte.attaque) >= Number(carte.defense) ? 'attaque' : 'defense';
   let image = creerImageCarte(carte, mode);
 
   slotLibre.textContent = '';
@@ -673,27 +672,6 @@ function adversaireJoue() {
 
 function valeur(img) {
   return Number(img.dataset[img.dataset.mode]);
-}
-
-function combat() {
-  let mesSlots = document.querySelectorAll('.slot1');
-  let slotsAdv = document.querySelectorAll('#opponent-field .slot');
-
-  for (let i = 0; i < mesSlots.length; i++) {
-    let a = mesSlots[i].querySelector('img');
-    let b = slotsAdv[i] && slotsAdv[i].querySelector('img');
-    if (!a || !b) continue;
-
-    let va = valeur(a);
-    let vb = valeur(b);
-
-    if (va >= vb) { b.remove(); slotsAdv[i].textContent = 'empty'; } 
-    if (vb >= va) { a.remove(); mesSlots[i].textContent = 'Empty'; } 
-
-    if (va > vb) score.moi++;
-    else if (vb > va) score.adv++;
-  }
-  alert('Score — Toi: ' + score.moi + ' | Adversaire: ' + score.adv);
 }
 
 boutonDraw.addEventListener('click', function () {
@@ -720,5 +698,5 @@ boutonEndTurn.addEventListener('click', function () {
   adversaireJoue();
 });
 
-activerClick();
+
 afficherCompteur();
