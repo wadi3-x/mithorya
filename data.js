@@ -670,9 +670,7 @@ function adversaireJoue() {
 }
 
 
-function valeur(img) {
-  return Number(img.dataset[img.dataset.mode]);
-}
+
 
 boutonDraw.addEventListener('click', function () {
   if (pioche.length === 0) {
