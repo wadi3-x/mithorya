@@ -20,7 +20,7 @@
     }
 
     .slot {
-      aspect-ratio: 59 / 86;
+      aspect-ratio: 2 / 3;
       border: 2px dashed yellow;
       border-radius: 6px;
       background: rgba(0, 0, 0, 0.35);
@@ -64,7 +64,7 @@
   <header id="header" class="flex flex-wrap items-center justify-center
                gap-3 bg-black/40 p-3 md:flex-wrap md:px-8">
 
-    <nav id="main-nav" class="order-3 w-full md:order-none md:w-auto ">
+    <nav id="main-nav" class=" w-full  md:w-auto ">
       <ul class="flex flex-wrap gap-4 text-sm md:gap-6 text-white ">
         <li><a id="nav-home" href="index.html" class="hover:text-[#d6ad60] transition ">Acceuil</a></li>
         <li><a id="nav-shop" href="boutique.html" class="hover:text-[#FFC247]">Boutique</a></li>
@@ -81,24 +81,29 @@
 
     <aside id="sidebar" class="lg:w-80 bg-black/60 rounded-lg p-4 ">
       <h2 id="collection-title" class="text-purple-400 font-bold mb-3">My Collection</h2>
+
       <button id="draw-btn" class="w-full bg-black text-white font-bold py-3 rounded-lg mb-3">Draw 5 to Hand</button>
+
+      
       <p id="deck-count" class="text-purple-300 text-sm">Deck: 0 cards</p>
+
+
     </aside>
 
     <section id="board" class="w-full flex flex-col gap-3 items-center ">
 
       <div id="opponent-field" class="field  bg-black/50 rounded-xl p-3 border border-red-400/40">
         <div class="grid grid-cols-10 gap-2 mb-2">
-          <div id="opp-gy" class="slot" data-zone="gy">empty</div>
-          <div id="opp-m1" class="slot" data-zone="m1">empty</div>
-          <div id="opp-m2" class="slot" data-zone="m2">empty</div>
-          <div id="opp-m3" class="slot" data-zone="m3">empty</div>
-          <div id="opp-m4" class="slot" data-zone="m4">empty</div>
-          <div id="opp-m5" class="slot" data-zone="m5">empty</div>
-          <div id="opp-m5" class="slot" data-zone="m6">empty</div>
-          <div id="opp-m5" class="slot" data-zone="m7">empty</div>
-          <div id="opp-m5" class="slot" data-zone="m8">empty</div>
-          <div id="opp-m5" class="slot" data-zone="m9">empty</div>
+          <div id="0" class="slot" data-zone="gy">empty</div>
+          <div id="1" class="slot" data-zone="m1">empty</div>
+          <div id="2" class="slot" data-zone="m2">empty</div>
+          <div id="3" class="slot" data-zone="m3">empty</div>
+          <div id="4" class="slot" data-zone="m4">empty</div>
+          <div id="5" class="slot" data-zone="m5">empty</div>
+          <div id="6" class="slot" data-zone="m6">empty</div>
+          <div id="7" class="slot" data-zone="m7">empty</div>
+          <div id="8" class="slot" data-zone="m8">empty</div>
+          <div id="9" class="slot" data-zone="m9">empty</div>
         </div>
       </div>
 
@@ -107,16 +112,17 @@
 
       <div id="player-field" class="field bg-black/50 rounded-xl p-3 border border-blue-400/40">
         <div class="grid grid-cols-10 gap-2 mb-2">
-          <div id="me-gy" class="slot1" data-zone="gy">Empty</div>
-          <div id="me-m1" class="slot1" data-zone="m1">Empty</div>
-          <div id="me-m2" class="slot1" data-zone="m2">Empty</div>
-          <div id="me-m3" class="slot1" data-zone="m3">Empty</div>
-          <div id="me-m4" class="slot1" data-zone="m4">Empty</div>
-          <div id="me-m5" class="slot1" data-zone="m5">Empty</div>
-          <div id="me-m1" class="slot1" data-zone="m1">Empty</div>
-          <div id="me-m2" class="slot1" data-zone="m2">Empty</div>
-          <div id="me-m3" class="slot1" data-zone="m3">Empty</div>
-          <div id="me-m4" class="slot1" data-zone="m4">Empty</div>
+          <div id="1" class="slot1" data-zone="gy">Empty</div>
+
+          <div id="2" class="slot1" data-zone="m1">Empty</div>
+          <div id="3" class="slot1" data-zone="m2">Empty</div>
+          <div id="4" class="slot1" data-zone="m3">Empty</div>
+          <div id="5" class="slot1" data-zone="m4">Empty</div>
+          <div id="6" class="slot1" data-zone="m5">Empty</div>
+          <div id="7" class="slot1" data-zone="m1">Empty</div>
+          <div id="8" class="slot1" data-zone="m2">Empty</div>
+          <div id="9" class="slot1" data-zone="m3">Empty</div>
+          <div id="10" class="slot1" data-zone="m4">Empty</div>
       
         </div>
 

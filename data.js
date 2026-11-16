@@ -556,12 +556,25 @@ if (document.getElementById('deck')) {
   afficherDeck();
 }
 
+
 let Nombre = 5;
 
-let collection = JSON.parse(localStorage.getItem("mythoriaCollection") || "[]");
-let idsDuDeck = JSON.parse(localStorage.getItem("mythoriaDeck") || "[]");
+
+let texteCollection = localStorage.getItem("mythoriaCollection");
+let collection = [];
+if (texteCollection !== null) {
+  collection = JSON.parse(texteCollection);
+}
+
+let texteDeck = localStorage.getItem("mythoriaDeck");
+let idsDuDeck = [];
+if (texteDeck !== null) {
+  idsDuDeck = JSON.parse(texteDeck);
+}
+
 let pioche = [];
 let main = [];
+
 
 for (let i = 0; i < idsDuDeck.length; i++) {
   for (let j = 0; j < collection.length; j++) {
@@ -571,7 +584,12 @@ for (let i = 0; i < idsDuDeck.length; i++) {
   }
 }
 
-let piocheAdv = collection.slice().sort(() => Math.random() - 0.5);
+
+let piocheAdv = [];
+for (let i = 0; i < collection.length; i++) {
+  piocheAdv.push(collection[i]);
+}
+
 let mainAdv = [];
 let score = { moi: 0, adv: 0 };
 
@@ -584,22 +602,31 @@ function afficherCompteur() {
   compteur.textContent = 'Deck: ' + pioche.length + ' cards';
 }
 
-function creerImageCarte(carte, mode) {
+function creerImageCarte(carte , mode) {
+  if (!mode) {
+    mode = 'attaque';
+  }
+
   let image = document.createElement('img');
- image.src = carte.image;
+  image.src = carte.image;
   image.className = 'card';
   image.title = carte.nom;
   image.dataset.attaque = carte.attaque;
   image.dataset.defense = carte.defense;
-  image.dataset.mode = mode || 'attaque';
-  if (mode === 'defense') image.style.transform = 'rotate(90deg)';
+  image.dataset.mode = mode;
+
+  if (mode === 'defense') {
+    image.style.transform = 'rotate(90deg)';
+  }
   return image;
 }
 
 function afficherMain() {
   zoneMain.innerHTML = '';
   for (let i = 0; i < main.length; i++) {
-    zoneMain.appendChild(creerImageCarte(main[i]));
+    let img = creerImageCarte(main[i]);
+    img.dataset.index = i; 
+    zoneMain.appendChild(img);
   }
 }
 
@@ -607,9 +634,9 @@ function activerClick() {
   let slots = document.querySelectorAll('.slot1');
 
   zoneMain.addEventListener('click', function (e) {
-    if (e.target.tagName !== 'IMG') return;
-
-    let indexCarte = Array.from(zoneMain.children).indexOf(e.target);
+    if (e.target.tagName !== 'IMG') {
+      return;
+    }
 
     let slotLibre = null;
     for (let i = 0; i < slots.length; i++) {
@@ -624,8 +651,15 @@ function activerClick() {
       return;
     }
 
+    let indexCarte = Number(e.target.dataset.index);
     let carte = main[indexCarte];
-    let mode = confirm('OK = Attaque, Annuler = Défense') ? 'attaque' : 'defense';
+
+    
+    let mode = 'defense';
+    if (confirm('OK = Attaque, Annuler = Défense')) {
+      mode = 'attaque';
+    }
+  
     let image = creerImageCarte(carte, mode);
 
     slotLibre.textContent = '';
@@ -639,13 +673,17 @@ function activerClick() {
 function adversairePioche() {
   for (let i = 0; i < Nombre; i++) {
     if (piocheAdv.length > 0) {
-      mainAdv.push(piocheAdv.pop());
+      let hasard = Math.floor(Math.random() * piocheAdv.length);
+      mainAdv.push(piocheAdv[hasard]);
+      piocheAdv.splice(hasard, 1);
     }
   }
 }
 
 function adversaireJoue() {
-  if (mainAdv.length === 0) return;
+  if (mainAdv.length === 0) {
+    return;
+  }
 
   let slotsAdv = document.querySelectorAll('#opponent-field .slot');
 
@@ -656,10 +694,14 @@ function adversaireJoue() {
       break;
     }
   }
-  if (slotLibre === null) return;
+
+  if (slotLibre === null) {
+    return;
+  }
 
   let hasard = Math.floor(Math.random() * mainAdv.length);
   let carte = mainAdv[hasard];
+  let mode = 'attaque';
 
   let image = creerImageCarte(carte, mode);
 
@@ -668,9 +710,6 @@ function adversaireJoue() {
 
   mainAdv.splice(hasard, 1);
 }
-
-
-
 
 boutonDraw.addEventListener('click', function () {
   if (pioche.length === 0) {
@@ -696,5 +735,5 @@ boutonEndTurn.addEventListener('click', function () {
   adversaireJoue();
 });
 
-
 afficherCompteur();
+activerClick();
